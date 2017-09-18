@@ -17,7 +17,7 @@ public class XMLUtil {
         try {
             DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = documentBuilderFactory.newDocumentBuilder();
-            Document document = builder.parse(new File("H:\\IntellJProject\\DesignPatterns\\src\\creational\\factory\\factory_method\\config.xml"));
+            Document document = builder.parse(new File("src/creational/factory/factory_method/config.xml"));
             NodeList nodeList = document.getElementsByTagName("className");
             Node node = nodeList.item(0).getFirstChild();
             String name = node.getNodeValue();

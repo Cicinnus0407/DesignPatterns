@@ -6,8 +6,10 @@ package creational.factory.simple_factory;
  */
 public class SimpleFactoryMain {
     public static void main(String[] args){
-        Shape shape = Factory.getChart("round");
+        Shape shape ;
+        shape = ShapeFactory.getShape(SimpleFactoryXmlUtil.getShapeType());
         shape.draw();
         shape.erase();
+
     }
 }

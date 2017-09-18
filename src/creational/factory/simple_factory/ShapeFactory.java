@@ -4,9 +4,8 @@ package creational.factory.simple_factory;
  * Created by Cicinnus on 2017/9/14.
  * 工厂类,用于创建各种图表
  */
-public class Factory {
-
-    public static Shape getChart(String type){
+public class ShapeFactory {
+    public static Shape getShape(String type)  {
         Shape shape =null;
         if(type.equalsIgnoreCase("round")){
             shape = new Round();
