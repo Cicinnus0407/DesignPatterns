@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<config>
+    <!--由于不在根目录,所以类名要跟包名,否则会抛ClassNotFoundException-->
+    <className>creational.abstract_factory.WindowsFactory</className>
+</config>
