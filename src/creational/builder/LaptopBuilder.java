@@ -6,18 +6,19 @@ package creational.builder;
  */
 public abstract class LaptopBuilder {
     //protected修饰可以被子类对象访问
-    protected Laptop laptop = new Laptop();
+    Laptop laptop = new Laptop();
 
     public abstract void buildScreen();
     public abstract void buildWifi();
     public abstract void buildKeyboard();
     public abstract void buildBlueTooth();
 
-    public Laptop build(){
-       this.buildScreen();
-       this.buildWifi();
-       this.buildKeyboard();
-       this.buildBlueTooth();
+    public Laptop construct( ){
+        this.buildScreen();
+        this.buildWifi();
+        this.buildBlueTooth();
+        this.buildKeyboard();
+
         return laptop;
     }
 

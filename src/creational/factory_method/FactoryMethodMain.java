@@ -7,8 +7,6 @@ package creational.factory_method;
 public class FactoryMethodMain {
     public static void main(String[] args) {
         PictureFactory pictureFactory = (PictureFactory) XMLUtil.getBean();
-        if (pictureFactory != null) {
-            pictureFactory.analysisPicture();
-        }
+        pictureFactory.analysisPicture();
     }
 }

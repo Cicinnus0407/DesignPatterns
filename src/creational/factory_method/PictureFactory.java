@@ -12,5 +12,4 @@ public abstract class PictureFactory {
         Picture picture = this.readPicture();
         picture.analysis();
     }
-
 }

@@ -6,9 +6,11 @@ package creational.builder;
  */
 public class BuilderMain {
     public static void main(String[] args) {
-        LaptopController laptopController = new LaptopController();
         LaptopBuilder laptopBuilder = (LaptopBuilder) BuilderXMLUtil.getBean();
-        Laptop laptop = laptopController.construct(laptopBuilder);
+
+        Laptop laptop = laptopBuilder.construct();
         System.out.println(laptop.toString());
+
+
     }
 }
