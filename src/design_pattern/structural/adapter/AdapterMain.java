@@ -8,7 +8,7 @@ import design_pattern.ObjectXMLUtil;
  */
 public class AdapterMain {
     public static void main(String[] args) {
-        DataOperation dataOperation = (DataOperation) ObjectXMLUtil.getBean("/src/design_pattern/structural/adapter/config.xml");
+        DataOperation dataOperation = (DataOperation) ObjectXMLUtil.getBean("src/design_pattern/structural/adapter/config.xml");
         if (dataOperation != null) {
             dataOperation.setPassword("cicinnus");
             String pwd = dataOperation.getPassword();

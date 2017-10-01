@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+    <!--输出的文件类型-->
+    <className>design_pattern.structural.bridge.PDFFile</className>
+    <!--数据库类型-->
+    <className>design_pattern.structural.bridge.OracleImpl</className>
+</config>
