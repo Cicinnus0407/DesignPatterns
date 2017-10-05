@@ -6,7 +6,6 @@ package design_pattern.creational.abstract_factory;
  */
 public class WindowsFactory implements Factory{
 
-
     @Override
     public Button createButton() {
         System.out.println("生产Windows按钮");

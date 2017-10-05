@@ -12,6 +12,5 @@ public class IoDHSingleton {
 
     private static class Holder{
         private static IoDHSingleton ioDHSingleton = new IoDHSingleton();
-
     }
 }

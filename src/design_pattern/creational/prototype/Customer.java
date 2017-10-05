@@ -3,7 +3,7 @@ package design_pattern.creational.prototype;
 /**
  * Created by Cicinnus on 2017/9/26.
  */
-public class Customer implements Cloneable {
+public class Customer implements AbstractCustomer {
     private String name;
     private int age;
     private Address address;
@@ -33,10 +33,12 @@ public class Customer implements Cloneable {
     }
 
     //浅克隆方法,只能复制基本类型
-    public Customer clone() {
-        Customer customer = null;
+
+    @Override
+    public AbstractCustomer clone() {
+        AbstractCustomer customer = null;
         try {
-            customer = (Customer) super.clone();
+            customer = (AbstractCustomer) super.clone();
         } catch (CloneNotSupportedException e) {
             System.out.println("不支持复制");
             e.printStackTrace();
@@ -45,11 +47,11 @@ public class Customer implements Cloneable {
     }
 
     @Override
-    public String toString() {
-        return "Customer{" +
+    public void display() {
+        System.out.println("Customer{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", address=" + address +
-                '}';
+                '}');
     }
 }

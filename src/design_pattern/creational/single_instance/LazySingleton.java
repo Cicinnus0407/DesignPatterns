@@ -4,7 +4,7 @@ package design_pattern.creational.single_instance;
  * Created by Cicinnus on 2017/9/18.
  */
 public class LazySingleton {
-    private static LazySingleton lazySingleton;
+    private volatile static LazySingleton lazySingleton = null;
 
     private LazySingleton() {
     }

@@ -6,7 +6,7 @@ import java.io.*;
  * Created by Cicinnus on 2017/9/26.
  * 允许深度克隆的Customer对象
  */
-public class CustomerDeepClone implements Serializable{
+public class CustomerDeepClone implements AbstractCustomer, Serializable {
     private String name;
     private int age;
     private AddressDeepClone address;
@@ -35,25 +35,31 @@ public class CustomerDeepClone implements Serializable{
         this.address = address;
     }
 
-    //深克隆,可以复制引用类型
-    public CustomerDeepClone deepClone() throws IOException, ClassNotFoundException {
+
+    @Override
+    public AbstractCustomer clone() {
         ByteArrayOutputStream bao = new ByteArrayOutputStream();
-
-        ObjectOutputStream oos = new ObjectOutputStream(bao);
-        oos.writeObject(this);
-
-        ByteArrayInputStream bis  = new ByteArrayInputStream(bao.toByteArray());
-        ObjectInputStream ois = new ObjectInputStream(bis);
-        return (CustomerDeepClone) ois.readObject();
-
+        ObjectOutputStream oos = null;
+        ByteArrayInputStream bis;
+        ObjectInputStream ois = null;
+        try {
+            oos = new ObjectOutputStream(bao);
+            oos.writeObject(this);
+            bis = new ByteArrayInputStream(bao.toByteArray());
+            ois = new ObjectInputStream(bis);
+            return (AbstractCustomer) ois.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
-    public String toString() {
-        return "CustomerDeepClone{" +
+    public void display() {
+        System.out.println("CustomerDeepClone{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", address=" + address +
-                '}';
+                '}');
     }
 }
