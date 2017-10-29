@@ -6,10 +6,10 @@ package design_pattern.structural.bridge;
 public class BridgeMain {
     public static void main(String[] args) {
         try {
-            AbstractFile abstractFile = (AbstractFile) BridgeXMLUtil.getObject("file");
-            ExactDataImpl exactDataImpl = (ExactDataImpl) BridgeXMLUtil.getObject("db");
+            AbstractFile abstractFile = new TXTFile();
+            ExactDataImpl exactDataImpl = new MySQLImpl();
             abstractFile.setExactDataImpl(exactDataImpl);
-            abstractFile.convert();
+            abstractFile.convertTo();
 
         } catch (Exception e) {
             e.printStackTrace();

@@ -9,6 +9,6 @@ public abstract class AbstractFile {
         this.exactDataImpl = exactDataImpl;
     }
 
-    public abstract void convert(  );
+    public abstract void convertTo(  );
 
 }

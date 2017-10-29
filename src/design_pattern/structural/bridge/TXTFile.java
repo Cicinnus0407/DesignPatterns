@@ -5,9 +5,9 @@ package design_pattern.structural.bridge;
  */
 public class TXTFile extends AbstractFile {
     @Override
-    public void convert() {
-        ExactData exactData = new ExactData();
-        exactDataImpl.readFrom(exactData);
+    public void convertTo() {
+        ExactData exactData =   exactDataImpl.readFromDB();
+
         System.out.println("转为TXT文件");
     }
 }

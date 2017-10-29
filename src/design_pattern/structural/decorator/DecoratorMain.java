@@ -5,7 +5,7 @@ package design_pattern.structural.decorator;
  */
 public class DecoratorMain {
     public static void main(String[] args) {
-        Car car = new Audi();
+        Car car = new WuLingHongGuang();
         CarDecorator carDecorator = new CarDecorator();
         carDecorator.setCar(car);
         carDecorator.speedup();

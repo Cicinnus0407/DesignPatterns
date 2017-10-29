@@ -5,9 +5,9 @@ package design_pattern.structural.bridge;
  */
 public class PDFFile extends AbstractFile {
     @Override
-    public void convert() {
-        ExactData exactData = new ExactData();
-        exactDataImpl.readFrom(exactData);
+    public void convertTo() {
+        ExactData exactData =  exactDataImpl.readFromDB();
+
         System.out.println("转换为PDF文件");
     }
 }

@@ -6,7 +6,8 @@ package design_pattern.structural.bridge;
 public class OracleImpl implements ExactDataImpl {
 
     @Override
-    public void readFrom(ExactData exactData) {
+    public ExactData readFromDB() {
         System.out.println("Oracle数据读取");
+        return new ExactData();
     }
 }

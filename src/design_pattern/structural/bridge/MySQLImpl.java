@@ -5,7 +5,8 @@ package design_pattern.structural.bridge;
  */
 public class MySQLImpl implements ExactDataImpl {
     @Override
-    public void readFrom(ExactData exactData) {
+    public ExactData readFromDB() {
         System.out.println("MySQL数据读取");
+        return new ExactData();
     }
 }
