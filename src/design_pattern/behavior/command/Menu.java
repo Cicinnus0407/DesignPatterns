@@ -20,4 +20,12 @@ public class Menu {
         menuItems.remove(menuItem);
     }
 
+
+
+    public void executeAll(){
+        for (MenuItem menuItem : menuItems) {
+            menuItem.click();
+        }
+    }
+
 }

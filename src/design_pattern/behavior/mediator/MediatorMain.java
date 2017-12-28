@@ -22,8 +22,9 @@ public class MediatorMain {
         listPane.setAbstractWindow(concreteWindow);
         gridPane.setAbstractWindow(concreteWindow);
 
+//        textPane.update();
 
-        buttonPane.update();
+        buttonPane.changed();
 
     }
 }

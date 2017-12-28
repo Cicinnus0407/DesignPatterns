@@ -19,6 +19,7 @@ public class MenuItem {
     }
 
     public void click() {
+        System.out.println(name+"执行操作");
         abstractCommand.execute();
     }
 }

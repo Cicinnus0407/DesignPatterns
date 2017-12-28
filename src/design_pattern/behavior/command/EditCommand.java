@@ -6,15 +6,9 @@ package design_pattern.behavior.command;
  */
 public class EditCommand extends AbstractCommand {
 
-    public EditCommand(BoardScreen boardScreen) {
-        this.boardScreen = boardScreen;
-    }
-
-    private BoardScreen boardScreen;
-
     @Override
     public void execute() {
-        boardScreen.edit();
+        System.out.println("编辑公告板");
     }
 
 }
